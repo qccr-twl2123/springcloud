@@ -1,7 +1,7 @@
 ## JWT权限校验
 
 
-### 经典的微服务全乡验证解决方案
+### 经典的微服务权限验证解决方案
 1.单点登录（SSO）方案
 ```
 采用单点登录方案，意味着每个面向用户的服务都必须与认证服务交互，
@@ -48,7 +48,37 @@
 ![输入图片说明](https://github.com/qccr-twl2123/livtrip/blob/master/src/main/resources/static/resources/images/JWT时序.png "在这里输入图片标题")
 
 
-### OAuth2 授权服务验证
+#### JWT认证原理简介
+```
+1.认证流程
+
+客户端调用登录接口（或者获取 token 接口），传入用户名密码。
+服务端请求身份认证中心，确认用户名密码正确。
+服务端创建 JWT，返回给客户端。
+客户端拿到 JWT，进行存储（可以存储在缓存中，也可以存储在数据库中，如果是浏览器，可以存储在 Cookie 中）在后续请求中，在 HTTP 请求头中加上 JWT。
+服务端校验 JWT，校验通过后，返回相关资源和数据。
+
+
+2.JWT结构
+JWT 是由三段信息构成的:
+第一段为头部（Header），
+第二段为载荷（Payload)，
+第三段为签名（Signature）。
+
+每一段内容都是一个 JSON 对象，将每一段 JSON 对象采用 BASE64 编码，将编码后的内容用.
+链接一起就构成了 JWT 字符串
+
+
+
+```
+
+
+参考博客:
+
+http://www.infoq.com/cn/articles/identity-authentication-of-architecture-in-micro-service
+
+
+
 
 
 
