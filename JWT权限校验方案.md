@@ -199,13 +199,13 @@ JWT只不过提供了一种基于token的请求验证机制。
 
 
 参考博客:
-
+```
 JWT源码实现方案(推荐)
 https://gitee.com/naan1993/guns
 
 http://www.infoq.com/cn/articles/identity-authentication-of-architecture-in-micro-service
 
-
+```
 
 
 
