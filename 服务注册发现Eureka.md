@@ -5,19 +5,19 @@
 
 #### 构建Eureka步骤
 ```
-maven依赖:
+1. maven依赖:
+
 <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-starter-eureka-server</artifactId>
 </dependency>
 
-application.properties:
+2. application.properties:
 
 server.port=1114
 #eureka.instance.hostname=localhost
-
 eureka.client.register-with-eureka=false
 eureka.client.fetch-registry=false
-
+eureka.client.serviceUrl.defaultZone=http://localhost:${server.port}/eureka/
 
 ```
