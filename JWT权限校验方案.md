@@ -130,13 +130,78 @@ Maven依赖:
 </dependency>
 
 
+JWT的生成和解析
+
+JWT的生成可以使用下面这样的代码完成：
+String generateToken(Map<String, Object> claims) {
+    return Jwts.builder()
+            .setClaims(claims)
+            .setExpiration(generateExpirationDate())
+            .signWith(SignatureAlgorithm.HS512, secret) //采用什么算法是可以自己选择的，不一定非要采用HS512
+            .compact();
+}
+
+数据声明（Claim）其实就是一个Map，
+比如我们想放入用户名，可以简单的创建一个Map然后put进去就可以了。
+
+Map<String, Object> claims = new HashMap<>();
+claims.put(CLAIM_KEY_USERNAME, username());
+
+解析也很简单，利用 jjwt 提供的parser传入秘钥，然后就可以解析token了。
+
+Claims getClaimsFromToken(String token) {
+    Claims claims;
+    try {
+        claims = Jwts.parser()
+                .setSigningKey(secret)
+                .parseClaimsJws(token)
+                .getBody();
+    } catch (Exception e) {
+        claims = null;
+    }
+    return claims;
+}
+
+请求如何进行拦截(Filter核心代码):
+
+HttpServletRequest httpRequest = (HttpServletRequest)request;  
+String auth = httpRequest.getHeader("Authorization");  
+if ((auth != null) && (auth.length() > 7))  
+{  
+    String HeadStr = auth.substring(0, 6).toLowerCase();  
+    if (HeadStr.compareTo("bearer") == 0)  
+    {  
+          
+        auth = auth.substring(7, auth.length());   
+        if (JwtHelper.parseJWT(auth, audienceEntity.getBase64Secret()) != null)  
+        {  
+            chain.doFilter(request, response);  
+            return;  
+        }  
+    }  
+}  
+
+
+```
+
+#### JWT短板
+```
+JWT本身没啥难度，但安全整体是一个比较复杂的事情，
+JWT只不过提供了一种基于token的请求验证机制。
+
+
+但我们的用户权限，对于API的权限划分、资源的权限划分，用户的验证等等都不是JWT负责的。
+也就是说，请求验证后，你是否有权限看对应的内容是由你的用户角色决定的。
+所以我们这里要利用Spring的一个子项目Spring Security来简化我们的工作。
 
 ```
 
 
 
-
 参考博客:
+
+JWT源码实现方案(推荐)
+https://gitee.com/naan1993/guns
 
 http://www.infoq.com/cn/articles/identity-authentication-of-architecture-in-micro-service
 
