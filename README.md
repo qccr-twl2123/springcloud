@@ -9,7 +9,6 @@
  2.权限校验(决定我们可以访问哪些资源):JWT和Security整合使用 
  3.XSS跨站攻击解决方案
  4.跨域访问解决方案,代码层Cors配置,nginx配置.
-   nginx: add_header Access-Control-Allow-Origin '*' 
  5.https配置方案
  
 二.服务治理篇       
