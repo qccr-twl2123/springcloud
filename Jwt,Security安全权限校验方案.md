@@ -200,11 +200,14 @@ JWT只不过提供了一种基于token的请求验证机制。
 
 参考博客:
 ```
+JWT简介
+http://www.infoq.com/cn/articles/identity-authentication-of-architecture-in-micro-service
+
 JWT源码实现方案(推荐)
 https://gitee.com/naan1993/guns
 
-http://www.infoq.com/cn/articles/identity-authentication-of-architecture-in-micro-service
-
+JWT,Security权限校验方案源码
+https://github.com/qccr-twl2123/spring-boot-tut
 ```
 
 

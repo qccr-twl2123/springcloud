@@ -12,7 +12,6 @@
    nginx: add_header Access-Control-Allow-Origin '*' 
  5.https配置方案
  
-       
 二.服务治理篇       
 
 ```
