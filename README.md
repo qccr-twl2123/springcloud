@@ -19,7 +19,7 @@
  5.服务的降级处理
  6.缓存问题：AutoLoadCache
  7.分页框架:PageHelper
-    
+ 8.日志管理;mongodb 存储日志and查询   
 三.数据层
 
  
