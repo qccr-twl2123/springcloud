@@ -20,6 +20,8 @@
  6.缓存问题:AutoLoadCache
  7.分页框架:PageHelper
  8.集中式日志管理:mongodb 存储日志and查询
+ 9.加密and解密: MD5,RSA2
+ 10.任务调度框架quartz运用
     
 三.数据层
  1.分布式ID生成机制
