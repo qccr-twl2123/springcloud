@@ -1,7 +1,7 @@
 ### SpringBoot
 
 #### 数据访问
-* Mybatis 数据源配置
+* Mybatis Generate 数据源配置
 * redis 配置
 * mongodb 配置
 
