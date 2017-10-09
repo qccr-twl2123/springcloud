@@ -120,11 +120,34 @@ app:
  
  
 //代码式例:
-CityCriteria cityCriteria = new CityCriteria(); //初始化or集合 
+//简单查询
+CityCriteria cityCriteria = new CityCriteria(); 
 cityCriteria.createCriteria().andIsHotEqualTo(Byte.parseByte("1"));
 //相当于:select * from city where is_hot = 1
 
+//排序操作
+CityCriteria cityCriteria = new CityCriteria(); 
+cityCriteria.setOrderByClause("id ASC");
+cityCriteria.createCriteria().andIsHotEqualTo(Byte.parseByte("1"));
+//相当于:select * from city where is_hot = 1 order by id asc
 
+//适用于后台查询功能
+public PageInfo<Dest> pageQueryListByCondition(DestQuery destQuery) {
+    PageHelper.startPage(destQuery.getPageNumber(),destQuery.getPageSize(),true);
+    DestCriteria destCriteria = new DestCriteria();
+    destCriteria.createCriteria();
+    if(StringUtils.isNoneBlank(destQuery.getCityName())){
+        destCriteria.getOredCriteria().get(0).andCityNameLike(destQuery.getCityName());
+    }
+    if(StringUtils.isNoneBlank(destQuery.getState())){
+        destCriteria.getOredCriteria().get(0).andStateLike(destQuery.getState());
+    }
+    if(destQuery.getDestinationId() != null){
+        destCriteria.getOredCriteria().get(0).andDestinationIdEqualTo(destQuery.getDestinationId());
+    }
+    List<Dest> dests = destMapper.selectByCriteria(destCriteria);
+    return new PageInfo<Dest>(dests);
+}
 
 ```
 
