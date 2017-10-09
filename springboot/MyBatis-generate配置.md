@@ -86,7 +86,7 @@ app:
       validationQuery: select 1
 ```
 * 如何执行生成操作and效果图
-<br/>
+
 ![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/mybatis-generate生成操作.png "在这里输入图片标题")
 
 * Dao常见的操作方法汇总
