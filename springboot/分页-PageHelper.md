@@ -27,6 +27,16 @@ class A{
 }
 
 ```
+
+```
+//分页排序
+PageHelper.startPage(pageNum , pageSize);
+PageHelper.orderBy("blog_ID desc");
+
+```
+
+
+
 * 参考博客
 ```
 PageHepler 使用教程
