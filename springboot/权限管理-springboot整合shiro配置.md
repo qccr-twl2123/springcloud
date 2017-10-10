@@ -179,4 +179,6 @@ public class ShiroConfig {
 ```
 系统的解决springboot集成shiro配置
 https://gitee.com/xierongli20162017/bootdo
+通用权限产品原型
+http://www.pmdaniu.com/rp/detail/16672
 ```
