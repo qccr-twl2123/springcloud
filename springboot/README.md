@@ -28,7 +28,13 @@
 * 使用@Scheduled创建定时任务
 * quartz 框架实现定时任务
 
+#### 分页插件
+* PageHepler配置
+* mybatis-paginator 配置
+
+
 #### 其他服务
 * StateMechine状态机模式
 * 邮件服务
 * 自定义错误页面
+
