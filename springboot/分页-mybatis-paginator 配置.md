@@ -98,7 +98,8 @@ public class MyPage extends PageRequest {
 
     public RowBounds getRowBounds() {
     // 使用PageBounds这个对象来控制结果的输出
-        PageBounds bounds = new PageBounds(this.getPageNumber() + 1, this.getPageSize(), PageOrder.formString(this.getSort()), true);
+        PageBounds bounds = new PageBounds(this.getPageNumber() + 1, 
+                    this.getPageSize(), PageOrder.formString(this.getSort()), true);
         return bounds;
     }
 }
@@ -130,7 +131,8 @@ public class PageRequest implements Pageable, Serializable{
 }
 
 public class PageBounds extends RowBounds implements Serializable {
-     public PageBounds(int page, int limit, List<PageOrder> orders, boolean containsTotalCount) {
+     public PageBounds(int page, int limit, List<PageOrder> orders, 
+                       boolean containsTotalCount) {
         this.page = page;
         this.limit = limit;
         this.orders = orders;
