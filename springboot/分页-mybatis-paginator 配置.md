@@ -37,7 +37,7 @@ PageBounds pageBounds = newPageBounds(page, pageSize , Order.formString(sortStri
 
 List list = findByCity("BeiJing",pageBounds);
 
-//获得结果集条总数
+//获得结果集条总数,返回的数值是PageList,而它实现List接口,所以进行强转 
 PageList pageList = (PageList)list;
 System.out.println("totalCount: "+ pageList.getPaginator().getTotalCount());
 
@@ -139,14 +139,17 @@ public class PageBounds extends RowBounds implements Serializable {
         this.containsTotalCount = containsTotalCount;
     }
 }
+//PageOrder.formString=Order.formString(sortString)
 //上面的PageOrder.formString方法代码就省略了, 主要是对参数”sort:字段名称(别名).
 // 排序方式”的解析并重新组合
+
   
 
 ```
 
 * 参考博客
 ```
+PageHelper相对mybatis-paginator更加强大,主要体现在PageInfo信息的封装,更加适用于前端页面
 http://blog.csdn.net/xubingchuan_blog/article/details/50933942
 ``` 
 
