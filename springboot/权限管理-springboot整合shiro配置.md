@@ -1,5 +1,8 @@
 ### springboot整合shiro配置
 
+* shiro认证流程图
+![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/shiro流程.png "在这里输入图片标题")
+
 * pom.xml依赖
 ```xml
 
@@ -169,4 +172,10 @@ public class ShiroConfig {
 
 }
 
+```
+
+#### 参考博客
+```
+系统的解决springboot集成shiro配置
+https://gitee.com/xierongli20162017/bootdo
 ```
