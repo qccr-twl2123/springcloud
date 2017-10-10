@@ -1,6 +1,7 @@
 ### springboot整合shiro配置
 
 * shiro认证流程图
+
 ![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/shiro流程.png "在这里输入图片标题")
 
 * pom.xml依赖
