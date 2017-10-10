@@ -5,6 +5,10 @@
 * redis 配置
 * mongodb 配置
 
+#### 权限控制
+* JWT 接口权限校验方案
+* 整合shiro配置
+
 #### 缓存支持
 * guava LocalCache 本地缓存 
 * 分布式缓存解决方案:AutoLoadCache
@@ -25,5 +29,6 @@
 * quartz 框架实现定时任务
 
 #### 其他服务
-* State状态机模式
+* StateMechine状态机模式
 * 邮件服务
+* 自定义错误页面
