@@ -25,6 +25,23 @@ Local Method Statck(本地方法栈)
 ```
 #### OOM内存溢出定位
 ```
+首先:确认服务是否正常
+tomcat进程判定
+ps aux | grep tomcat
+
+如果是调用了外部服务,请使用curl进行判定.
+一、get请求
+curl "http://www.baidu.com"  如果这里的URL指向的是一个文件或者一幅图都可以直接下载到本地
+curl -i "http://www.baidu.com"  显示全部信息
+curl -l "http://www.baidu.com" 只显示头部信息
+curl -v "http://www.baidu.com" 显示get请求全过程解析
+
+wget "http://www.baidu.com"也可以
+
+二、post请求
+curl -d "param1=value1&param2=value2" "http://www.baidu.com"
+
+
 1.查看内存分配情况:
   jmap -heap 10765(进程ID)
   
