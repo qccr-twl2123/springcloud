@@ -51,7 +51,6 @@ pay:
 1.公钥私钥按照下面博文配置,取到私钥配置到privateKey
 http://www.jianshu.com/p/2bb7e8a719ee
 2.应用公钥需要在支付宝后台获取(alipayPulicKey),如下图
-
 ```
 
 ![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/支付宝alipayPulicKey.png "在这里输入图片标题")
