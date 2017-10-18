@@ -31,3 +31,11 @@ public class Application {
     }
 }
 ```
+
+为了与后续要进行注册的服务区分，这里将服务注册中心的端口通过server.port属性设置为1001。
+启动工程后，访问：http://localhost:1001/，可以看到下面的页面，其中还没有发现任何服务。
+
+![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/spring-cloud-starter-dalston-1-1.png "在这里输入图片标题")
+
+
+
