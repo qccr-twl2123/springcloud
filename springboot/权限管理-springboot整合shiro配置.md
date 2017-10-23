@@ -181,4 +181,7 @@ public class ShiroConfig {
 https://gitee.com/xierongli20162017/bootdo
 通用权限产品原型
 http://www.pmdaniu.com/rp/detail/16672
+
+示例
+https://www.2b2b92b.com/
 ```
