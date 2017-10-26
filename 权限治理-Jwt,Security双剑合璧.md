@@ -186,9 +186,12 @@ if ((auth != null) && (auth.length() > 7))
 
 #### JWT短板
 ```
-JWT本身没啥难度，但安全整体是一个比较复杂的事情，
-JWT只不过提供了一种基于token的请求验证机制。
+1.在Web应用中，别再把JWT当做session使用，绝大多数情况下，
+传统的cookie-session机制工作得更好
 
+2. JWT适合一次性的命令认证，颁发一个有效期极短的JWT，
+即使暴露了危险也很小，由于每次操作都会生成新的JWT，
+因此也没必要保存JWT，真正实现无状态。
 
 但我们的用户权限，对于API的权限划分、资源的权限划分，用户的验证等等都不是JWT负责的。
 也就是说，请求验证后，你是否有权限看对应的内容是由你的用户角色决定的。
@@ -208,6 +211,8 @@ https://gitee.com/naan1993/guns
 
 JWT,Security权限校验方案源码
 https://github.com/qccr-twl2123/spring-boot-tut
+
+http://www.jianshu.com/p/af8360b83a9f
 ```
 
 
