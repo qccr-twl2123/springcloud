@@ -206,6 +206,9 @@ if ((auth != null) && (auth.length() > 7))
 JWT简介
 http://www.infoq.com/cn/articles/identity-authentication-of-architecture-in-micro-service
 
+使用JWT和Spring Security保护REST API:
+http://www.jianshu.com/p/6307c89fe3fa
+
 JWT源码实现方案(推荐)
 https://gitee.com/naan1993/guns
 
