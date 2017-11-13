@@ -46,7 +46,7 @@ curl -d "param1=value1&param2=value2" "http://www.baidu.com"
   jmap -heap 10765(进程ID)
   
 ```
- ![输入图片说明](https://github.com/qccr-twl2123/livtrip/blob/master/src/main/resources/static/resources/images/内存分配.png "在这里输入图片标题")
+ ![输入图片说明](https://github.com/qccr-twl2123/livtrip/blob/master/src/main/resources/static/resources/images/jmap堆的使用情况.png "在这里输入图片标题")
 
 ```
 2.找到最耗内存的对象:
