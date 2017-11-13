@@ -87,6 +87,8 @@ http://www.cnblogs.com/andy-zhou/p/5327288.html
 
 Spring Boot & Spring Cloud应用内存管理
 http://blog.didispace.com/spring-boot-spring-cloud-memory/
+JVM性能调优
+https://www.oschina.net/question/3189620_2269580
 ```
 
 
