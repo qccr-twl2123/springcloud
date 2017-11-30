@@ -184,4 +184,7 @@ http://www.pmdaniu.com/rp/detail/16672
 
 示例
 https://www.2b2b92b.com/
+
+功能权限和数据权限设计思路
+https://zhuanlan.zhihu.com/p/31533120
 ```
