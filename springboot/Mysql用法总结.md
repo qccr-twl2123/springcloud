@@ -12,6 +12,11 @@
 hugaoxiang 
 密码
 a7M6031XxUi5Z91ss8OB 
+
+共享地址:
+\\192.168.10.193 
+yanfa
+zLXE872OF8kBBISy9rQv
 ```
 
 #### 建表规范
