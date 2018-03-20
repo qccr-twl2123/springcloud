@@ -38,3 +38,18 @@
 * 邮件服务
 * 自定义错误页面
 
+* 翻墙教程
+```text
+Your Server IP        :  47.75.85.48
+Your Server Port      :  6000
+Your Password         :  Mark2018
+Your Protocol         :  origin
+Your obfs             :  plain
+Your Encryption Method:  aes-256-cfb
+```
+
+* SpringBoot极简教程
+```text
+https://www.jianshu.com/c/c3fe8e7aeb09
+```
+
