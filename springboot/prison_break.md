@@ -30,4 +30,15 @@ https://github.com/shadowsocks/shadowsocks-windows/releases
 ```
 ![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/afanqiang2.png "在这里输入图片标题")
 
+```text
+^@^^@^^@^^@^    ^@^^@^^@^^@^       ^@^^@^^@^^@^
+^@^                      ^@^       ^@^      ^@^
+^@^                      ^@^       ^@^      ^@^
+^@^                      ^@^       ^@^      ^@^
+^@^^@^^@^^@^     ^@^^@^^@^^@^      ^@^      ^@^
+         ^@^     ^@^               ^@^      ^@^
+         ^@^     ^@^               ^@^      ^@^
+         ^@^     ^@^               ^@^      ^@^
+^@^^@^^@^^@^     ^@^^@^^@^^@^      ^@^^@^^@^^@^
+```
 
