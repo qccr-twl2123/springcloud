@@ -73,6 +73,10 @@ nohup mvn clean spring-boot:run | tee ../log 2>&1 &
 
 //这句代码设置发布模块内存分布情况
 export MAVEN_OPTS="-Xms512m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m"
+参数说明:
+-Xmx1024m：设置JVM最大可用内存为1024M。
+-Xms512m：虚拟机占用系统的最小内存。此值可以设置与-Xmx相同，以避免每次垃圾回收完成后JVM重新分配内存。
+-XX:MaxPermSize：最大堆大小。这个也适当大些, 所以若出现问题，首先请调整 –Xms512m：将其设置的小一些
 ```
 tomcat:
 
