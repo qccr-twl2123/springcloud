@@ -4,7 +4,9 @@
 
 ```text
 -Xms 和 -Xmx (-XX:InitialHeapSize 和 -XX:MaxHeapSize)：指定JVM初始占用的堆内存和最大堆内存
-
+-XX:NewSize 和 -Xmn(-XX:MaxNewSize)：指定JVM启动时分配的新生代内存和新生代最大内存
+-XX:SurvivorRatio：设置新生代中1个Eden区与1个Survivor区的大小比值。
+eg:在hotspot虚拟机中，新生代 = 1个Eden + 2个Survivor。如果新生代内存是10M，SurvivorRatio=8，那么Eden区占8M，2个Survivor区各占1M。
 ```
 
 * 什么情况会发生栈内存溢出?
