@@ -61,17 +61,17 @@ spring:
 ## 1.语言切换
 ### 3.1 方案一(控制器方法)
 ```java
-
 @GetMapping("changeLanguage")
-    public String changeLanguage(String lang, HttpSession session, HttpServletResponse response) {
-        if ("zh".equals(lang)) {
-            session.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, new Locale("zh", "CN"));
-        } else if ("en".equals(lang)) {
-            session.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, new Locale("en", "US"));
-        }
-        return "ok";
+public String changeLanguage(String lang, HttpSession session, HttpServletResponse response) {
+    if ("zh".equals(lang)) {
+        session.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, new Locale("zh", "CN"));
+    } else if ("en".equals(lang)) {
+        session.setAttribute(SessionLocaleResolver.LOCALE_SESSION_ATTRIBUTE_NAME, new Locale("en", "US"));
     }
+    return "ok";
+}
 ```
+<h2 id="2">配置0000</h>
 ### 3.2.方案二(配置法)
 ```java
 @Configuration
