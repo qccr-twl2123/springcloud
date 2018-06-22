@@ -121,8 +121,7 @@ welcome=欢迎
 
 ## 5.附录
 ```text
-spring.ftl 链接
-https://github.com/spring-projects/spring-framework/edit/master/spring-webmvc/src/main/resources/org/springframework/web/servlet/view/freemarker/spring.ftl
+[spring.ftl](https://github.com/spring-projects/spring-framework/edit/master/spring-webmvc/src/main/resources/org/springframework/web/servlet/view/freemarker/spring.ftl)
 ```
 
 
