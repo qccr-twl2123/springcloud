@@ -7,12 +7,12 @@
 * [5 附录](#5)
 
 
-<h2 id="1">1.简介</h2>
+## 1.简介
 ```text
 springboot+freemarker 国际化解决方案
 ```
 
-<h2 id="2">2.配置</h2>
+## 2.配置
 * 配置application.yml文件
 ```text
 spring:
@@ -58,8 +58,8 @@ spring:
   demo.html
   <h1><@spring.message "bjdd" /></h1>
 ```
-<h2 id="3">1.语言切换</h2>
-<h2 id="3.1">3.1 方案一(控制器方法)</h2>
+## 1.语言切换
+### 3.1 方案一(控制器方法)
 ```java
 
 @GetMapping("changeLanguage")
@@ -72,7 +72,7 @@ spring:
         return "ok";
     }
 ```
-<h2 id="3.2">3.2.方案二(配置法)</h2>
+### 3.2.方案二(配置法)
 ```java
 @Configuration
 @EnableAutoConfiguration
@@ -108,7 +108,7 @@ public class Application extends WebMvcConfigurerAdapter {
  <a href="?lang=zh_CN" > 中文</a>
 ```
 
-<h2 id="4">4.注意事项</h2>
+## 4.注意事项
 ```text
 中文编辑
 正确
@@ -119,7 +119,7 @@ submit = \u63D0\u4EA4
 welcome=欢迎
 ```
 
-<h2 id="5">5.附录</h2>
+## 5.附录
 ```text
 spring.ftl 链接
 https://github.com/spring-projects/spring-framework/edit/master/spring-webmvc/src/main/resources/org/springframework/web/servlet/view/freemarker/spring.ftl
