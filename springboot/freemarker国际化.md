@@ -71,7 +71,6 @@ public String changeLanguage(String lang, HttpSession session, HttpServletRespon
     return "ok";
 }
 ```
-<h2 id="2">配置0000</h>
 ### 3.2.方案二(配置法)
 ```java
 @Configuration
