@@ -1,21 +1,20 @@
 * [1.简介](#1)
 * [2 配置](#2)
 * [3 语言切换](#3)
-* [3.1 方案一](#3.1)
-* [3.2 方案二](#3.2)
+    * [3.1 方案一](#3.1)
+    * [3.2 方案二](#3.2)
 * [4 注意事项](#4)
 * [5 附录](#5)
 
 
 <h2 id="1">1.简介</h2>
 ```text
-
 springboot+freemarker 国际化解决方案
 ```
+
 <h2 id="2">2.配置</h2>
 * 配置application.yml文件
 ```text
-
 spring:
     messages:
       basename: i18n/messages
@@ -75,7 +74,6 @@ spring:
 ```
 <h2 id="3.2">3.2.方案二(配置法)</h2>
 ```java
-
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
@@ -106,14 +104,12 @@ public class Application extends WebMvcConfigurerAdapter {
 ```
 * 在页面上切换操作
 ```html
-
  <a href="?lang=en_US" > 英语</a>
  <a href="?lang=zh_CN" > 中文</a>
 ```
 
 <h2 id="4">4.注意事项</h2>
 ```text
-
 中文编辑
 正确
 welcome = \u6B22\u8FCE\u6765\u5230Spring\u56FD\u9645\u5316\u9875\u9762
@@ -122,9 +118,9 @@ submit = \u63D0\u4EA4
 错误
 welcome=欢迎
 ```
+
 <h2 id="5">5.附录</h2>
 ```text
-
 spring.ftl 链接
 https://github.com/spring-projects/spring-framework/edit/master/spring-webmvc/src/main/resources/org/springframework/web/servlet/view/freemarker/spring.ftl
 ```
