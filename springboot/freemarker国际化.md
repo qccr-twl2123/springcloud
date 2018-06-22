@@ -9,17 +9,20 @@
 
 <h2 id="1">1.简介</h2>
 ```text
+
 springboot+freemarker 国际化解决方案
 ```
-<h2 id="2">1.配置</h2>
+<h2 id="2">2.配置</h2>
 * 配置application.yml文件
-```
+```text
+
 spring:
     messages:
       basename: i18n/messages
 ```
 * 创建资源,在src/main/resources文件夹下创建i18n文件夹，并新建三个文件:
 ```text
+
 message.properties(默认语言包)
 message_zh_CN.properties（中文语言包）
 message_en_US.properties（英文语言包）
@@ -27,6 +30,7 @@ message_en_US.properties（英文语言包）
 ```
 * 配置application.yml文件
 ```text
+
 spring:
   freemarker:
     settings:
@@ -34,6 +38,7 @@ spring:
 ```  
 * 初始化LocaleResolver
 ```java
+
 @Configuration
   public class WebConfig extends WebMvcConfigurerAdapter {
       @Bean
@@ -46,6 +51,7 @@ spring:
 ```
 * 使用@spring message 标签
 ```text
+
   message_zh_CN.properties
   bjdd=BJDD
   message_en_US.properties
@@ -56,6 +62,7 @@ spring:
 <h2 id="3">1.语言切换</h2>
 <h2 id="3.1">3.1 方案一(控制器方法)</h2>
 ```java
+
 @GetMapping("changeLanguage")
     public String changeLanguage(String lang, HttpSession session, HttpServletResponse response) {
         if ("zh".equals(lang)) {
@@ -68,6 +75,7 @@ spring:
 ```
 <h2 id="3.2">3.2.方案二(配置法)</h2>
 ```java
+
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan
@@ -98,12 +106,14 @@ public class Application extends WebMvcConfigurerAdapter {
 ```
 * 在页面上切换操作
 ```html
+
  <a href="?lang=en_US" > 英语</a>
  <a href="?lang=zh_CN" > 中文</a>
 ```
 
 <h2 id="4">4.注意事项</h2>
 ```text
+
 中文编辑
 正确
 welcome = \u6B22\u8FCE\u6765\u5230Spring\u56FD\u9645\u5316\u9875\u9762
@@ -114,6 +124,7 @@ welcome=欢迎
 ```
 <h2 id="5">5.附录</h2>
 ```text
+
 spring.ftl 链接
 https://github.com/spring-projects/spring-framework/edit/master/spring-webmvc/src/main/resources/org/springframework/web/servlet/view/freemarker/spring.ftl
 ```
