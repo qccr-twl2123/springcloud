@@ -93,5 +93,7 @@ SELECT INET_ATON('192.168.0.1')
 SELECT INET_NTOA(3232235521)
     ->192.168.0.1
 ```
+[mysql安装教程](https://www.linuxidc.com/Linux/2016-09/135288.htm)
+
 
 
