@@ -14,3 +14,6 @@
 
 ### 参考链接
 [JavaWeb动态调用JNI](http://www.imooc.com/article/14702)
+[JNI使用总结](https://www.jianshu.com/p/fe42aa3150a0)
+
+
