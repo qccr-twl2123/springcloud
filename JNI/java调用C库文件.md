@@ -8,8 +8,8 @@
 3.要实现java能调用到c或c++的底层实现,需要在运行时候改变java.library.path内容   
 ``` 
 
-
-![输入图片说明](https://github.com/qccr-twl2123/springcloud/tree/master/images/java-jni.jpg "在这里输入图片标题")
+### 调用流程
+![输入图片说明](https://raw.githubusercontent.com/qccr-twl2123/springcloud/master/images/java-jni.jpg "在这里输入图片标题")
 
 ### 参考链接
 [JavaWeb动态调用JNI](http://www.imooc.com/article/14702)
