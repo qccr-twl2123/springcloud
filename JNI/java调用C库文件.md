@@ -9,11 +9,11 @@
 ``` 
 
 ### 调用流程图
-![Java-JNI](https://github.com/qccr-twl2123/springcloud/tree/master/images/java-jni.jpg "Java JNI")
-
+![输入图片说明](https://github.com/qccr-twl2123/springcloud/tree/master/images/java-jni.jpg "在这里输入图片标题")
 
 ### 参考链接
 [JavaWeb动态调用JNI](http://www.imooc.com/article/14702)
+----
 [JNI使用总结](https://www.jianshu.com/p/fe42aa3150a0)
 
 
