@@ -9,7 +9,7 @@
 ``` 
 
 ### 调用流程图
-![Java-JNI](https://github.com/qccr-twl2123/springcloud/tree/master/images/java-jni.jpg"Java JNI")
+![Java-JNI](https://github.com/qccr-twl2123/springcloud/tree/master/images/java-jni.jpg "Java JNI")
 
 
 ### 参考链接
