@@ -19,6 +19,9 @@ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/some/pathOfContainingDirectory"
 mv JNIDemo.so libJNIDemo.so
 
 ```
+```text
+注: so文件放在bin路径下，要修改文件名, 在文件名前面加lib
+```
 
 ### 参考链接
 [JavaWeb动态调用JNI](http://www.imooc.com/article/14702)
