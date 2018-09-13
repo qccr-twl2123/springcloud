@@ -70,8 +70,13 @@ curl -d "param1=value1&param2=value2" "http://www.baidu.com"
   
 ```
 #### OOM内存溢出解决方案
-springboot:
+SpringBoot JVM 调优:
 ```
+1. 这个根据服务器的内存大小，来设置堆参数。
+   -Xms :设置Java堆栈的初始化大小
+   -Xmx :设置最大的java堆大小
+   java -server -Xms512m -Xmx768m  -jar springboot-1.0.jar   
+
 #nohup mvn spring-boot:run > ../log 2>&1 &
 export MAVEN_OPTS="-Xms512m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m"
 nohup mvn clean spring-boot:run | tee ../log 2>&1 &
@@ -83,7 +88,7 @@ export MAVEN_OPTS="-Xms512m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m"
 -Xms512m：虚拟机占用系统的最小内存。此值可以设置与-Xmx相同，以避免每次垃圾回收完成后JVM重新分配内存。
 -XX:MaxPermSize：最大堆大小。这个也适当大些, 所以若出现问题，首先请调整 –Xms512m：将其设置的小一些
 ```
-tomcat:
+
 
 
 参考博客:
