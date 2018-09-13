@@ -42,8 +42,13 @@ wget "http://www.baidu.com"也可以
 curl -d "param1=value1&param2=value2" "http://www.baidu.com"
 
 
-1.查看内存分配情况:
+1.top命令查询内存消耗情况
+  查询耗内存最多的进程
+  
+2.查看内存分配情况:
   jmap -heap 10765(进程ID)
+
+3.用 jstack 命令分析 java 进程jstack 25717  
   
 ```
  ![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/jmap堆的使用情况.png "在这里输入图片标题")
