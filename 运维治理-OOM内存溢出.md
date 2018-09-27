@@ -92,6 +92,8 @@ export MAVEN_OPTS="-Xms512m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m"
 
 
 参考博客:
+[OutOfMemoryError ](https://blog.csdn.net/aitangyong/article/details/41180211)
+[实现堆溢出、栈溢出、永久代溢出、直接内存溢出](https://blog.csdn.net/u011983531/article/details/63250882)
 ```
 线上服务溢出
 https://mp.weixin.qq.com/s?__biz=MjM5ODYxMDA5OQ==&mid=2651960342&idx=1&sn=9b2dbbb2cfd7710f25be1a0862a9b2be&chksm=bd2d01ca8a5a88dcc14608cb00e0dbde11869d053ee8c83bc96e7b4a0fbd71d28d7fbb009c98&mpshare=1&scene=23&srcid=09089nNk4emn8gVQCDfRqa7g#rd
