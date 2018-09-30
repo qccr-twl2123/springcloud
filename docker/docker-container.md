@@ -14,3 +14,7 @@ docker run -m 100M --memory-swap 200M <imageName>
 -m 设置内存限制
 --memory-swap 设置内存+swap大小
 ```
+* cgroup(control group)
+```text
+cd /sys/fs/cgroup/
+```
