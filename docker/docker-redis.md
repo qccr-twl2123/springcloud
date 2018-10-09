@@ -7,6 +7,8 @@ docker pull  redis:3.2
 ```text
 docker run -p 6379:6379 -v $PWD/data:/data  -d redis:3.2 redis-server --appendonly yes
 
+docker run -p 6379:6379 --privileged=true --name myredis -v /home/redis/data/:/data -v /home/redis/redis.conf:/etc/redis/redis.conf -d redis:3.2 redis-server /etc/redis/redis.conf --appendonly yes
+
 参数解释:
 redis-server --appendonly yes : 在容器执行redis-server启动命令，并打开redis持久化配置
 ```
