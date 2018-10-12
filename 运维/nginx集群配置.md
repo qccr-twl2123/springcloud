@@ -24,6 +24,17 @@ sudo systemctl start nginx.service
 sudo systemctl enable nginx.service
 ```
 
+* conf配置
+```text
+location / {                       
+    proxy_pass http://$group;
+    proxy_set_header   Host             $host;
+    proxy_set_header   X-Real-IP        $remote_addr;
+    proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+    index  index.html index.htm;
+  }
+```
+
 
 ### FAQ
 * nginx 安装路径?

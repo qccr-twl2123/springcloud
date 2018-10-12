@@ -1,6 +1,6 @@
 ### docker
 
-![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/springcloud架构.png "在这里输入图片标题")
+![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/docker持续集成.png "在这里输入图片标题")
 
 * spring-cloud-boot-docker
 ```text
