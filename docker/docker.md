@@ -8,7 +8,21 @@ yum remove -y docker docker-common docker-selinux docker-engine
 yum install docker 
 
 启动
-systemctl
+service docker start
+chkconfig docker on
+
+#LCTT 译注：此处采用了旧式的 sysv 语法，如采用CentOS 7中支持的新式 systemd 语法，如下：
+systemctl  start docker.service
+systemctl  enable docker.service
+systemctl restart docker
+
+中国镜像加速器
+vi  /etc/docker/daemon.json
+#添加后：
+{
+    "registry-mirrors": ["https://registry.docker-cn.com"],
+    "live-restore": true
+}
 
 ```
 * 镜像构建常用命令
