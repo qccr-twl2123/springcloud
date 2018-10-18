@@ -40,7 +40,3 @@ docker ps -aq -f status=exited
 docker ps -aq --no-trunc -f status=exited | xargs docker rm
 ```
 
-* 进入容器内部终端
-```text
-docker  exec -i -t  <容器ID or 容器别名>  /bin/bash
-```

@@ -1,17 +1,24 @@
 ### docker compose 教程
 * 简介
 ```text
-1.概述
-  描述服务编排的逻辑
-2.将所管理的容器分为三层:工程,服务,容器
-   
+Dockerfile 可以让用户管理一个单独的应用容器
+Docker-Compose 则允许用户在一个模板（YAML 格式）中定义一组相关联的应用容器（被称为一个 project，即项目）
 ```
 * 安装
 ```text
-下载最新版的docker-compose文件?
-$ sudo curl -L https://github.com/docker/compose/releases/download/1.16.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-添加可执行权限?
-$ sudo chmod +x /usr/local/bin/docker-compose
-测试安装结果?
-$ docker-compose?--version?docker-compose?version 1.16.1, build 1719ceb
+1. 安装pip如果不存在
+    sudo yum install python-pip 
+    pip --version
+2. 执行如下命令
+    sudo pip install -U docker-compose
+3. 添加bash补全命令(暂时不懂？)
+   curl -L https://raw.githubusercontent.com/docker/compose/1.2.0/contrib/completion/bash/docker-compose > /etc/bash_completion.d/docker-compose
+     
 ```
+
+* 启动和停止
+```text
+启动: docker-compose start
+停止: docker-compose stop
+```
+[docker-compose使用](http://wiki.jikexueyuan.com/project/docker-technology-and-combat/intro.html)
