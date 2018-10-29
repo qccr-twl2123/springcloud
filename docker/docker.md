@@ -11,6 +11,11 @@ yum install docker
 service docker start
 chkconfig docker on
 
+将docker 转移到大磁盘目录
+mkdir /data/dockerData/
+mv /var/lib/docker /data/dockerData/
+ln -s /data/dockerData/docker /var/lib/docker
+
 #LCTT 译注：此处采用了旧式的 sysv 语法，如采用CentOS 7中支持的新式 systemd 语法，如下：
 systemctl  start docker.service
 systemctl  enable docker.service
