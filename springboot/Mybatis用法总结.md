@@ -109,5 +109,28 @@ where id = ${item.id}
 select * from user where username LIKE  cancat('%',#{username}),'%')
 ```
 
+* 模板改進
+```text
+List<Task> listFieldByExample(@Param("fields")String fields,@Param("example")TaskExample example);  
+
+<select id="listFieldByExample" resultMap="BaseResultMap" parameterType="map" >
+  select
+  distinct
+  <choose>
+    <when test="fields != null">
+      ${fields}
+    </when>
+    <otherwise>
+      <include refid="Base_Column_List" />
+    </otherwise>
+  </choose>
+  from task
+  <if test="_parameter != null" >
+    <include refid="Update_By_Example_Where_Clause" />
+  </if>
+</select>
+```
+
+
 
 
