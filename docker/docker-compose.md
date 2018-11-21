@@ -23,8 +23,19 @@ docker-compose --version
 
 运行(进入docker-compose.yml所在目录):
 docker-compose up
+
+方案三:
+// docker Version: 18.06.1-ce
+// docker-compose Version 1.23.1
+wget -c https://github.com/itsccn/jpressBydocker/releases/download/jpressBydocker1.0/docker-compose -O /opt/docker-compose
+wget -c https://github.com/itsccn/jpressBydocker/releases/download/jpressBydocker1.0/docker.rpm -O /opt/docker.rpm
+yum install -y /opt/docker.rpm
+chmod +x /opt/docker-compose
+mv /opt/docker-compose /usr/local/bin/
      
 ```
+
+
 
 * 启动和停止
 ```text
