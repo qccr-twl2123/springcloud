@@ -41,7 +41,12 @@ docker build --rm -t user-service .
 1.List all exited containers
 docker ps -aq -f status=exited
 
+
 2.Remove stopped containers
 docker ps -aq --no-trunc -f status=exited | xargs docker rm
+```
+* É¾³ýnone¾µÏñ
+```text
+docker rmi $(docker images | grep "none" | awk '{print $3}') 
 ```
 
