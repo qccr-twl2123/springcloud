@@ -15,7 +15,9 @@
    http://ip:5000/v2/_catalog
 4.指定私有库
    执行: vi /etc/docker/daemon.json
-   新增: "insecure-registries":["47.105.131.1:5000"]      
+   新增: "insecure-registries":["47.105.131.1:5000"]    
+   
+5.重启docker: systemctl restart docker      
 ```
 * 私有库web页面
 ```text
