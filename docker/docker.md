@@ -1,42 +1,42 @@
-### docker ³£ÓÃÃüÁî
-* docker °²×°
+### docker ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* docker ï¿½ï¿½×°
 ```text
-É¾³ý¾É°æ±¾
+É¾ï¿½ï¿½ï¿½É°æ±¾
 yum remove -y docker docker-common docker-selinux docker-engine
 
-°²×°
+ï¿½ï¿½×°
 yum install docker 
 
-Æô¶¯
+ï¿½ï¿½ï¿½ï¿½
 service docker start
 chkconfig docker on
 
-½«docker ×ªÒÆµ½´ó´ÅÅÌÄ¿Â¼
+ï¿½ï¿½docker ×ªï¿½Æµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿Â¼
 mkdir /data/dockerData/
 mv /var/lib/docker /data/dockerData/
 ln -s /data/dockerData/docker /var/lib/docker
 
-#LCTT Òë×¢£º´Ë´¦²ÉÓÃÁË¾ÉÊ½µÄ sysv Óï·¨£¬Èç²ÉÓÃCentOS 7ÖÐÖ§³ÖµÄÐÂÊ½ systemd Óï·¨£¬ÈçÏÂ£º
+#LCTT ï¿½ï¿½×¢ï¿½ï¿½ï¿½Ë´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¾ï¿½Ê½ï¿½ï¿½ sysv ï¿½ï·¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½CentOS 7ï¿½ï¿½Ö§ï¿½Öµï¿½ï¿½ï¿½Ê½ systemd ï¿½ï·¨ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½
 systemctl  start docker.service
 systemctl  enable docker.service
 systemctl restart docker
 
-ÖÐ¹ú¾µÏñ¼ÓËÙÆ÷
+ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 vi  /etc/docker/daemon.json
-#Ìí¼Óºó£º
+#ï¿½ï¿½Óºï¿½
 {
     "registry-mirrors": ["https://registry.docker-cn.com"],
     "live-restore": true
 }
 
 ```
-* ¾µÏñ¹¹½¨³£ÓÃÃüÁî
+* ï¿½ï¿½ï¿½ñ¹¹½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ```text
 mvn package docker:build
 
 docker build --rm -t user-service .
 ```
-* É¾³ýÈ«²¿ÒÑ¾­Í£Ö¹µÄÈÝÆ÷
+* É¾ï¿½ï¿½È«ï¿½ï¿½ï¿½Ñ¾ï¿½Í£Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ```text
 1.List all exited containers
 docker ps -aq -f status=exited
@@ -45,7 +45,7 @@ docker ps -aq -f status=exited
 2.Remove stopped containers
 docker ps -aq --no-trunc -f status=exited | xargs docker rm
 ```
-* É¾³ýnone¾µÏñ
+* É¾ï¿½ï¿½noneï¿½ï¿½ï¿½ï¿½
 ```text
 docker rmi $(docker images | grep "none" | awk '{print $3}') 
 ```
