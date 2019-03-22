@@ -26,3 +26,4 @@ sku指的是具体规格单品（玫瑰金 16G），sku属性就是会影响到�
 
 * 参考链接
 [ecshop数据库设计](http://book.ecmoban.com/images/db.htm)
+[SKU SPU 设计](https://blog.csdn.net/sinat_41832255/article/details/80886494)
