@@ -20,6 +20,21 @@ sku指的是具体规格单品（玫瑰金 16G），sku属性就是会影响到�
 所以iphone6s则会生成 3 * 3 = 9 个 sku
 ```
 
+* 电商创建商品流程
+```text
+1. 商家创建类目
+2. 商家创建商品，并选择类目
+3. 录入属性相关信息.
+    生成spu(品牌_产地_材质_颜色_重量) 判断SPU是否存在，不存在则添加
+    生成sku(iphone6_china_金属_黑色_1400), 判断SKU是否存在, 不存在则添加
+    生成库存stock(goods_id,sku_id,number)
+    
+从数据库的角度看:
+1. 一个spu 会生成多个sku
+2. 一个spu 会对应多个商品数据    
+3. 一个sku 会对应生成一条stock库存数据   
+```
+
 * 数据库ER图
 ![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/spu-sku.png "在这里输入图片标题")
 
