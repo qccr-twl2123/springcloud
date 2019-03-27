@@ -35,6 +35,9 @@ sku指的是具体规格单品（玫瑰金 16G），sku属性就是会影响到�
 3. 一个sku 会对应生成一条stock库存数据   
 ```
 
+![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/电商属性.png "在这里输入图片标题")
+
+
 * 数据库ER图
 ![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/spu-sku.png "在这里输入图片标题")
 
