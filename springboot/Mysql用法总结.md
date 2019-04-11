@@ -5,6 +5,7 @@
 3.索引运用
 ```
 
+
 ```text
 查询事务隔离级别
 select @@tx_isolation;
