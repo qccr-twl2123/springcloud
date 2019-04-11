@@ -4,6 +4,8 @@
 ```text
 scp root@192.168.10.88:/opt/pdf_template/term/*.pdf ./
 
+scp root@47.75.85.48:/backup/door-server-demo.zip ./
+
 ```
 * curl 
 ```text
