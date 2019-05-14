@@ -31,6 +31,11 @@ public class FunctionalDemo {
 
     }
 
+   public void BiConsumer(){
+       BiConsumer consumer = (a b) -> { System.out.println(a + b);
+       consumer.accept(5 " Chapters"); }
+    }
+
     /**
      * 转换
      */
