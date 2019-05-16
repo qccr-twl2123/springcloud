@@ -46,6 +46,11 @@ apt-get update && apt-get install vim
 apt-get update && apt-get install cron
 ```
 
+* 进入mysql 控台方法
+```text
+mysql -u 用户名 -p之后，输入mysql密码，进入mysql控制台
+```
+
 ### 容器操作
 * 容器之间共享数据
 ```text
