@@ -17,7 +17,7 @@ curl -i --get --include 'http://jisucxdq.market.alicloudapi.com/car/brand'  -H '
 * telnet 
 ```text
 测试服务器端口是否可以联通
-telnet 10.113.12.233 1088
+telnet 10.113.12.233 1099
 ```
 
 
