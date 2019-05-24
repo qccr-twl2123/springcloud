@@ -14,4 +14,10 @@ scp root@47.75.85.48:/backup/door-server-demo.zip ./
 curl -i --get --include 'http://jisucxdq.market.alicloudapi.com/car/brand'  -H 'Authorization:APPCODE 你自己的AppCode'
 ```
 
+* telnet 
+```text
+测试服务器端口是否可以联通
+telnet 10.113.12.233 1088
+```
+
 
