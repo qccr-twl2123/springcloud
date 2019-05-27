@@ -20,4 +20,17 @@ curl -i --get --include 'http://jisucxdq.market.alicloudapi.com/car/brand'  -H '
 telnet 10.113.12.233 1099
 ```
 
+* 查看远程服务器方法 入参和出参
+```text
+-- ./greys.sh 1 使用
+curl -sLk http://ompc.oss.aliyuncs.com/greys/install.sh|sh
+
+./greys.sh 1
+
+watch -bf <方法reference> <方法名> params -x 1
+
+watch -bf ManagerShieldStrategyDOMapper queryStrategyBySlotId returnObj -x 1
+```
+
+
 
