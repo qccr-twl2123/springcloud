@@ -1,39 +1,39 @@
-### docker Ë½ÓÐ²Ö¿â´î½¨
-* Ë½ÓÐ¿â´î½¨
+### docker Ë½ï¿½Ð²Ö¿ï¿½î½¨
+* Ë½ï¿½Ð¿ï¿½î½¨
 ```text
-1.ÏÂÔØ¾µÏñ
+1.ï¿½ï¿½ï¿½Ø¾ï¿½ï¿½ï¿½
   docker pull registry
-2.Æô¶¯ÈÝÆ÷
+2.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   docker run -d -p 5000:5000 --restart=always --name=registry-srv -v /mydata/dockerRegistry:/var/lib/registry registry
-  ²ÎÊý½âÊÍ:
-     -d£ººóÌ¨ÔËÐÐ
-     -p£º½«ÈÝÆ÷µÄ5000¶Ë¿ÚÓ³Éäµ½ËÞÖ÷»úµÄ5000¶Ë¿Ú
-     --restart£ºdocker·þÎñÖØÆôºó×ÜÊÇÖØÆô´ËÈÝÆ÷
-     --name£ºÈÝÆ÷µÄÃû³Æ
-     -v£º½«ÈÝÆ÷ÄÚµÄ/var/lib/registryÓ³Éäµ½ËÞÖ÷»úµÄ/mydata/dockerRegistryÄ¿Â¼
-3.ÑéÖ¤
+  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:
+     -dï¿½ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½
+     -pï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5000ï¿½Ë¿ï¿½Ó³ï¿½äµ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½5000ï¿½Ë¿ï¿½
+     --restartï¿½ï¿½dockerï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     --nameï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     -vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½/var/lib/registryÓ³ï¿½äµ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½/mydata/dockerRegistryÄ¿Â¼
+3.ï¿½ï¿½Ö¤
    http://ip:5000/v2/_catalog
-4.Ö¸¶¨Ë½ÓÐ¿â
-   Ö´ÐÐ: vi /etc/docker/daemon.json
-   ÐÂÔö: "insecure-registries":["47.105.131.1:5000"]    
+4.Ö¸ï¿½ï¿½Ë½ï¿½Ð¿ï¿½
+   Ö´ï¿½ï¿½: vi /etc/docker/daemon.json
+   ï¿½ï¿½ï¿½ï¿½: "insecure-registries":["47.105.131.1:5000"]    
    
-5.ÖØÆôdocker: systemctl restart docker      
+5.ï¿½ï¿½ï¿½ï¿½docker: systemctl restart docker      
 ```
-* Ë½ÓÐ¿âwebÒ³Ãæ
+* Ë½ï¿½Ð¿ï¿½webÒ³ï¿½ï¿½
 ```text
-1.ÏÂÔØ¾µÏñ
+1.ï¿½ï¿½ï¿½Ø¾ï¿½ï¿½ï¿½
     docker pull hyper/docker-registry-web
-2.Æô¶¯ÈÝÆ÷
+2.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     docker run -it -p 8080:8080 --restart=always --name registry-web --link registry-srv -e REGISTRY_URL=http://registry-srv:5000/v2 -e REGISTRY_NAME=localhost:5000 hyper/docker-registry-web
-    ²ÎÊý½âÊÍ:
-         -it: ÒÔ½»»¥Ä£Ê½ÔËÐÐ
-         --link£ºÁ´½ÓÆäËüÈÝÆ÷(registry-srv)£¬ÔÚ´ËÈÝÆ÷ÖÐ£¬Ê¹ÓÃregistry-srvµÈÍ¬ÓÚregistry-srvÈÝÆ÷µÄ¾ÖÓòÍøµØÖ·
-         -e£ºÉèÖÃ»·¾³±äÁ¿
+    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:
+         -it: ï¿½Ô½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½
+         --linkï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(registry-srv)ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½Ê¹ï¿½ï¿½registry-srvï¿½ï¿½Í¬ï¿½ï¿½registry-srvï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·
+         -eï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 ```
 
-* ÉÏ´«¾µÏñµ½Ë½ÓÐ¿â
+* ï¿½Ï´ï¿½ï¿½ï¿½ï¿½ï¿½Ë½ï¿½Ð¿ï¿½
 ```text
-1. ÏÈ½«¾µÏñÖØÐÂÃüÃû: ip:5000/<imageName>
+1. ï¿½È½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ip:5000/<imageName>
    docker tag cbbing/hcharts 192.168.1.87:5000/cbbing/hcharts
-2. docker push <ÖØÃüÃûºóµÄ¾µÏñ>
+2. docker push <ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½>
 ```
