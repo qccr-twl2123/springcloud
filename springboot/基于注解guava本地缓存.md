@@ -203,12 +203,12 @@ class CacheKeyGenerator implements KeyGenerator {
 
 ### @Cacheable/@CachePut/@CacheEvict 主要的参数
 
-name | 价格 |  数量  
+名称 | 解释 |  备注  
 -|-|-
-香蕉 | $1 | 5 |
-苹果 | $1 | 6 |
-草莓 | $1 | 7 |
-
+key | 缓存的 key，可以为空，如果指定要按照 SpEL 表达式编写，如果不指定，则缺省按照方法的所有参数进行组合 | @Cacheable(value=”testcache”,key=”#id”) |
+condition | 缓存的条件,使用 SpEL 编写，返回 true 或者 false,只有为 true 才进行缓存/清除缓存 | @Cacheable(value=”testcache”,condition=”#userName.length()>2”) |
+unless | 否定缓存。当条件结果为TRUE时，就不会缓存。 | @Cacheable(value=”testcache”,unless=”#userName.length()>2”) |
+allEntries | 是否清空所有缓存内容，缺省为 false，如果指定为 true，则方法调用后将立即清空所有缓存 | @CachEvict(value=”testcache”,allEntries=true)
 
 
 
