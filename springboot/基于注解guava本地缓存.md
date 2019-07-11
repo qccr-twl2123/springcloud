@@ -136,6 +136,13 @@ public ResultDTO method(int id);
 ```java
 @Cacheable(value="cacheName", key"T(String).valueOf(#name).concat('-').concat(#password))
 public ResultDTO method(int name, String password);
+
+@Cacheable(value = "page_user",key ="T(String).valueOf(#page).concat('-').concat(#pageSize)",unless = "#result=null")//由于page是int型,concat要求变量必须为String,所以强转一下
+@Override
+public List<SysUserEntity> page(int page, int pageSize) {
+    return userMapper.page(page,pageSize);
+}
+
 ```
 
 * 对象形式
@@ -194,7 +201,18 @@ class CacheKeyGenerator implements KeyGenerator {
 }
 ```
 
+### @Cacheable/@CachePut/@CacheEvict 主要的参数
+
+name | 价格 |  数量  
+-|-|-
+香蕉 | $1 | 5 |
+苹果 | $1 | 6 |
+草莓 | $1 | 7 |
+
+
+
 
 * 参考文档
 [springboot 整合guava cache](https://www.jianshu.com/p/921c588289c7)
 [Cacheable key生成策略](https://blog.csdn.net/syani/article/details/52239967)
+[史上超详细的SpringBoot整合Cache使用教程](https://www.javazhiyin.com/4618.html)
