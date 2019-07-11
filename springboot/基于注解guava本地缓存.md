@@ -214,5 +214,7 @@ allEntries | 是否清空所有缓存内容，缺省为 false，如果指定为 
 
 * 参考文档
 [springboot 整合guava cache](https://www.jianshu.com/p/921c588289c7)
+
 [Cacheable key生成策略](https://blog.csdn.net/syani/article/details/52239967)
+
 [史上超详细的SpringBoot整合Cache使用教程](https://www.javazhiyin.com/4618.html)
