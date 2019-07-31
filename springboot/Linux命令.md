@@ -29,7 +29,12 @@ curl -sLk http://ompc.oss.aliyuncs.com/greys/install.sh|sh
 
 watch -bf <方法reference> <方法名> params -x 1
 
-watch -bf ManagerShieldStrategyDOMapper queryStrategyBySlotId returnObj -x 1
+watch -bf <方法reference> <方法名> returnObj -x 1
+
+# json信息
+watch -s <方法reference> <方法名>returnObj -x 4
+
+watch -s <方法reference> <方法名> params -x 4   
 ```
 
 
