@@ -1,11 +1,11 @@
-### docker rabbitmq 教程
+### docker rabbitmq 锟教筹拷
 
-* 安装
+* install
 ```text
 docker run -d --name myrabbitmq -p 5673:5672 -p 15673:15672 docker.io/rabbitmq:3-management
-管理页面: http://ip:15367  默认:guest
+testing: http://ip:15367  
 ```
-* 进入容器终端
+* enter docker container
 ```text
 docker exec -it rabbitmq /bin/bash
 ```
