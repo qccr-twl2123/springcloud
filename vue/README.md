@@ -1,17 +1,17 @@
-### vue 项目环境配置指南
+### vue ??????????????
 ```text
-1. 安装node.js
+1. node.js
 sudo yum install nodejs
 
-2. 安装淘宝镜像 
+2. cnpm 
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 
-3. vue-cli 客户端
+3. vue-cli 
 cnpm install -g vue-cli
 
-4.进入项目路径，安装所需的依赖包
+4. cnpm
 cnpm install
 
-5.运行项目
+5.run
 npm run dev
 ```
