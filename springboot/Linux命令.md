@@ -36,6 +36,15 @@ watch -s <方法reference> <方法名>returnObj -x 4
 
 watch -s <方法reference> <方法名> params -x 4   
 ```
+* 排查JVM 堆中内存&GC情况
+```text
+查看堆中存活的对象
+jmap -histo:live <pid> 
+
+查询进程的GC情况
+jstat -gcutil 1 100 
+jstat -gcutil <pid> 打印的时间间隔数  
+```
 
 
 
