@@ -1,10 +1,14 @@
-### docker image ¾µÏñ
+### docker image é•œåƒ
 
-* ¿ÉÊÓ»¯¹ÜÀí¹¤¾ß
+* å¯è§†åŒ–ç®¡ç†å·¥å…·
 ```text
-harbor: ´¿¹ÜÀí¾µÏñ
-humpback: ¹ÜÀí¾µÏñºÍÈİÆ÷
+harbor: çº¯ç®¡ç†é•œåƒ
+humpback: ç®¡ç†é•œåƒå’Œå®¹å™¨
+```
+* delete image
+```text
+docker rmi ed9c93747fe1
 ```
 
 
-[humpback-arch¹Ù·½ÎÄµµ](https://humpback.github.io/humpback/#/humpback-arch)
+[humpback-archå®˜æ–¹æ–‡æ¡£](https://humpback.github.io/humpback/#/humpback-arch)

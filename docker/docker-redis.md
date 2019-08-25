@@ -19,3 +19,25 @@ redis-server --appendonly yes : ?????????redis-server????????????redis????????
 docker exec -it  <containerId> redis-cli
 ```
 
+* redis  set password
+```text
+docker run -d --name myredis -p 6379:6379 redis --requirepass "mypassword"
+```
+
+*  redis port valid
+```text
+1. run 
+telnet 111.231.189.44 6379
+
+2. auth 
+auth password
+
+3. message
+Ok, keys * 
+```
+
+*  设置密码后，客户端连接 redis 服务就需要密码验证
+```text
+AUTH password
+```
+
