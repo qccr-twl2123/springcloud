@@ -43,6 +43,58 @@ repeated
 
 ```
 
+* 有关enum message 特说说明
+```text
+在定义message类型的时候，也许会有这样一种需求：
+其中的一个字段仅需要包含预定义的若干个值即可。
+比如，对于每一个搜索请求，现需要增加一个分类字段，
+分类包含：UNIVERSAL, WEB, IMAGES, LOCAL, NEWS, PRODUCTS or VIDEO。
+要实现该功能，仅需要增加一个枚举类型字段。如下：
+
+
+message SearchRequest {
+    required string query = 1;
+    optional int32 page_number = 2;
+    optional int32 result_per_page = 3 [default = 10];
+    enum Corpus {
+       UNIVERSAL = 0;
+       WEB = 1;
+       IMAGES = 2;
+       LOCAL = 3;
+       NEWS = 4;
+       PRODUCTS = 5;
+       VIDEO = 6;
+    }
+    optional Corpus corpus = 4 [default = UNIVERSAL];
+}
+```
+* 使用其他Message类型作为filed类型
+```text
+PB允许使用message类型作为filed类型。例如，在搜索相应message中，
+包含一个结果message。此时，只需要定义一个结果message，
+然后再.proto文件中，在搜索结果message中新增一个字段，该字段的类型设置为结果message即可。
+
+message SearchResponse 
+{
+    repeated Result result = 1;
+}
+
+message Result 
+{
+    required string url = 1;
+    optional string title = 2;
+    repeated string snippets = 3;
+}
+
+在上例中，Result message类型与SearchResponse 定义在同一个文件中，假如有这么一种情况，这里所要使用的Resultmessage已经在其他的.proto文件中定义了呢？
+可以通过导入其他.proto文件来使用其内的定义。为达此目的，需要在现.proto文件前增加一条import语句：
+
+import "myproject/other_protos.proto";
+
+
+protobuf建议字段的命名采用以下划线分割的驼峰式。例如 first_name 而不是firstName.
+```
+
 
 ### springboot 集成proto 
 
