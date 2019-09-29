@@ -12,6 +12,6 @@ cnpm install -g vue-cli
 4. cnpm
 cnpm install
 
-5.run
+5.run****
 npm run dev
 ```
