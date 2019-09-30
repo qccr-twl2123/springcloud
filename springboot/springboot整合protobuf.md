@@ -1,5 +1,22 @@
 ### springboot 整合protobuf
 
+#### protocol buffers优势
+```text
+与xml比较
+1. 更简单
+2. 数据描述文件只需原来的1/10至1/3
+3. 解析速度是原来的20倍至100倍
+4. 减少了二义性
+5. 生成了更容易在编程中使用的数据访问类
+
+与json比较
+Json有一定结构的在数据量上还有可以压缩的空间。
+pb则是序列化的二进制编码数据，而且数据的格式是事先通过一个后缀名为.proto的文件指定
+省去JSON编解码体系中属性匹配和数据类型匹配的时间和精力，让我们能专注于解决自己的问题。
+
+可读性上xml、json可读性强
+```
+
 #### windows 安装proto环境
 ```text
 1. 下载地址
@@ -14,6 +31,11 @@ https://github.com/protocolbuffers/protobuf/releases/download/v3.9.0/protoc-3.9.
 3. 通过运行 protoc --version 来确定已经配置正确和编译器版本。
 
 4. protoc ./test.proto --java_out=./  (1.模版路径 2. 文件输出路径)
+```
+
+* mac 安装 
+```text
+brew install protobuf 
 ```
 
 
@@ -67,6 +89,28 @@ message SearchRequest {
     }
     optional Corpus corpus = 4 [default = UNIVERSAL];
 }
+option java_package = "com.test.protobuf";  
+option java_outer_classname="PersonProtos";  
+  
+message Person {  
+  required string name = 1;  
+  required int32 id = 2;  
+  optional string email = 3;  
+  
+  enum PhoneType {  
+    MOBILE = 0;  
+    HOME = 1;  
+    WORK = 2;  
+  }  
+  
+  message PhoneNumber {  
+    required string number = 1;  
+    optional PhoneType type = 2 [default = HOME];  
+  }  
+  
+  repeated PhoneNumber phone = 4;  
+}  
+
 ```
 * 使用其他Message类型作为filed类型
 ```text
@@ -105,7 +149,7 @@ protoc --java_out=src/main/java src/main/resources/*.proto
 
 * 服务提供方需要增加protobuf库的引用，以gradle为例子
 ```text
-compile('com.google.protobuf:protobuf-java:3.6.1')
+compile('com.google.protobuf:protobuf-java:3.9.1')
 compile('com.googlecode.protobuf-java-format:protobuf-java-format:1.4')
 
 ```
@@ -226,3 +270,4 @@ public class UserBaseServiceTest {
 * 参考文档
 [springboot整合proto](https://cloud.tencent.com/developer/article/1504965)
 [windows 配置proto环境](https://blog.51cto.com/ossez/2422995)
+[JSON与proto性能比较](https://my.oschina.net/xiaolei123/blog/3085607)
