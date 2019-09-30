@@ -51,7 +51,6 @@ message SearchRequest{
 
 1. 指定field类型
 
-![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/proto-data-type.png "在这里输入图片标题")
 
 2. 分配标签
 每个field都是唯一数字的标记，
@@ -64,6 +63,8 @@ optional
 repeated
 
 ```
+![输入图片说明](https://github.com/qccr-twl2123/springcloud/blob/master/images/proto-data-type.png "在这里输入图片标题")
+
 
 * 有关enum message 特说说明
 ```text
