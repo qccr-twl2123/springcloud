@@ -35,7 +35,14 @@ https://github.com/protocolbuffers/protobuf/releases/download/v3.9.0/protoc-3.9.
 
 * mac 安装 
 ```text
-brew install protobuf 
+brew install protobuf
+
+brew uninstall protobuf
+
+brew search protobuf
+
+brew reinstall protobuf@2.5
+
 ```
 
 
