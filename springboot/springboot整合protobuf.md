@@ -276,6 +276,7 @@ public class UserBaseServiceTest {
 
 
 * 参考文档
+[mac安装指定版本protobuf](https://blog.csdn.net/lxhandlbb/article/details/81061493)
 [springboot整合proto](https://cloud.tencent.com/developer/article/1504965)
 [windows 配置proto环境](https://blog.51cto.com/ossez/2422995)
 [JSON与proto性能比较](https://my.oschina.net/xiaolei123/blog/3085607)
