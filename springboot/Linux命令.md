@@ -46,5 +46,7 @@ jstat -gcutil 1 100
 jstat -gcutil <pid> 打印的时间间隔数  
 ```
 
+[greys在线问题诊断工具](https://zyongjava.github.io/2018/09/05/greys%E4%BD%BF%E7%94%A8/)
+
 
 
