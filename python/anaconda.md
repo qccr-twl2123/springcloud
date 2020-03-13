@@ -87,3 +87,10 @@ conda update requests 更新requests包
 conda env export > environment.yaml  // 导出当前环境的包信息
 conda env create -f environment.yaml  // 用配置文件创建新的虚拟环境
 ```
+
+#### idea 构建anaconda环境
+
+
+
+
+
