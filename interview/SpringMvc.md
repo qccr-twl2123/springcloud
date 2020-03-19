@@ -1,12 +1,26 @@
 ### spring mvc 配置和初始化
+````text
+context:上下文
+filter: 拦截器
+servlet: 
+listener: 监听器
+register: 注册
 
-####
+
+
+````
+
+#### 面试题
 ```text
 1. spring mvc 模块如何加载到spring容器？
 2. spring @controller 如何扫描到map集合？
 3. dispatcherServlet 如何在如何handlerMapping集合？
 4. WebApplicationInitializer扩展mvc具体的应用场景有哪些(类和方法)？
 5. WebMvcConfigure 接口是在哪个节点发挥作用？
+
+6. 底层配置原理
+7. 
+
 ```
 
 #### 反射的运用
