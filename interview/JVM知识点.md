@@ -16,6 +16,16 @@ eg:在hotspot虚拟机中，新生代 = 1个Eden + 2个Survivor。
 2.是否有大量循环或死循环
 3.全局变量是否过多
 4.数组、List、map数据是否过大
-
-
 ```
+
+* 线上内存溢出排查
+````text
+jps 进程总览
+
+jinfo  进程信息
+jstack  jstack能得到运行java程序的java stack和native stack的信息。可以轻松得知当前线程的运行情况
+jstate 对内存的情况，及垃圾回收的次数  jstate -gc pid
+jmap 导出dump 堆内存的快照
+
+jvisula 查看堆快照的显示情况
+````
