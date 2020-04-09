@@ -17,10 +17,6 @@ register: 注册
 3. dispatcherServlet 如何在如何handlerMapping集合？
 4. WebApplicationInitializer扩展mvc具体的应用场景有哪些(类和方法)？
 5. WebMvcConfigure 接口是在哪个节点发挥作用？
-
-6. 底层配置原理
-7. 
-
 ```
 
 #### 反射的运用
